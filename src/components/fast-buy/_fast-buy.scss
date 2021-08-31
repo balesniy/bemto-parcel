@@ -1,0 +1,30 @@
+.fast-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding: 18px;
+  background: rgba(5, 120, 226, 0.1);
+  border-radius: 12px;
+
+  &__field {
+    appearance: none;
+
+    font-family: inherit;
+    padding: 12px;
+    background: #FFFFFF;
+    border: 1px solid rgba(11, 13, 15, 0.1);
+    border-radius: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* чёрный */
+    color: #0B0D0F;
+    min-width: 0;
+    width: 100%;
+    max-width: max-content;
+  }
+}

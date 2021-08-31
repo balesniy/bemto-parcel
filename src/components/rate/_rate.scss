@@ -1,0 +1,21 @@
+.rate {
+  font-size: 14px;
+  line-height: 16px;
+
+  color: rgba(11, 13, 15, 0.5);
+
+  &__title {
+    width: max-content;
+  }
+
+  &__current {
+    display: inline-block;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* чёрный */
+    color: #0B0D0F;
+  }
+}

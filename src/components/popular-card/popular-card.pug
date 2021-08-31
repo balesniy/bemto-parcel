@@ -1,0 +1,9 @@
+mixin popular-card()
+    - var {title, image, price} = attributes
+    +b.popular-card
+        +e.image
+            img(src= `./${image}?as=webp&width=2500&height=185` width=250 height=185)
+        +e.title= title
+        +e.price= price
+        +e.cta
+            +button.btn--secondary.btn--cart.btn--full-width В корзину

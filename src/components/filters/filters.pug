@@ -1,0 +1,56 @@
+include ../checkbox/checkbox
+-
+    var colors = [
+        'Тransparent', 'Тransparent/Black', 'Тransparent/green',
+        'Violet', 'White', 'Yellow',
+        'Violet', 'White', 'Yellow', 'Violet', 'White', 'Yellow',
+
+    ]
+
+    var RAL = [
+        'Agate grey (RAL 7038)', 'Azure Blue (RAL 5009)', 'Basalit grey (RAL 7012)',
+        'Beige (RAL 1001)', 'Black Drown (RAL 8022)', 'Blue grey (RAL 7031)',
+        'Beige (RAL 1001)', 'Black Drown (RAL 8022)', 'Blue grey (RAL 7031)'
+    ]
+
+mixin filters
+    +b.FORM.filters
+        +e.INPUT(placeholder='Поиск по названию').search
+        +e.FIELDSET.fieldset
+            +e.LEGEND.legend
+                | Категория
+                +e.checked-count (#[span 3])
+            +e.fields
+                each category in categories
+                    +e.field
+                        +checkbox(category)
+        +e.FIELDSET.fieldset
+            +e.LEGEND.legend Ширина
+            +e.field
+                +e.INPUT(type='range').range
+                +e.INPUT(type='range').range
+        +e.FIELDSET.fieldset
+            +e.LEGEND.legend Статус
+            +e.field
+                +checkbox('В наличии')
+            +e.field
+                +checkbox('Ожидается')
+        +e.FIELDSET.fieldset
+            +e.LEGEND.legend
+                | Цвет
+                +e.checked-count (#[span 3])
+            +e.fields
+                each color in colors
+                    +e.field
+                        +checkbox(color)
+        +e.FIELDSET.fieldset
+            +e.LEGEND.legend
+                | RAL
+                +e.checked-count (#[span 3])
+            +e.fields
+                each color in RAL
+                    +e.field
+                        +checkbox(color)
+        +e.controls
+            +button(type='submit').btn--primary.btn--full-width Найти
+            +button(type='reset').btn--secondary.btn--full-width Сбросить фильтр

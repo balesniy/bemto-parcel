@@ -1,0 +1,15 @@
+mixin button()
+    - var type = attributes.href ? 'link' : 'button'
+    if type === 'link'
+        a.btn&attributes(attributes)
+            if block
+                block
+            else
+                | No content provided
+    else
+        button.btn&attributes(attributes)
+            if block
+                block
+            else
+                | No content provided
+

@@ -1,0 +1,5 @@
+mixin applying-card(title, src)
+    +b.applying-card
+        +e.A(href='#').title= title
+        +e.image
+            img(src= `./${src}?as=webp&width=400&height=185` width=400 height=185)

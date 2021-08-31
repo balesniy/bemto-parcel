@@ -1,0 +1,47 @@
+include ../components/rate/rate
+include ../components/social/social
+include ../components/address/address
+
++b.page-footer
+    +e.wrapper
+        +e.logo
+            img(src='assets/logo.png' width=325)
+        +e.rate
+            +rate
+        +e.A(href='#').politics Политика конфиденциальности
+        +e.copyright 2020-2021 copyright OOO “ТД Чернец”
+    +e.menu
+        +b.footer-menu
+            +e.title Меню
+            +e.UL.items
+                +e.LI.item--active
+                    a(href='#') Главная
+                +e.LI.item
+                    a(href='#') О компании
+                +e.LI.item
+                    a(href='#') Поставщики
+                +e.LI.item
+                    a(href='#') Доставка и оплата
+                +e.LI.item
+                    a(href='#') Услуги и сервисы
+                +e.LI.item
+                    a(href='#') Партнёрский кабинет
+    +e.contacts
+        +b.footer-contacts
+            +e.title Контакты
+            +e.UL.items
+                +e.LI.item
+                    a(href='tel:') 7 812 305 25 16
+                +e.LI.item
+                    a(href='tel:') 7 812 305 25 16
+                +e.LI.item
+                    a(href='tel:') 7 812 305 25 16
+                +e.LI.item
+                    a(href='tel:') 7 812 305 25 16
+                +e.LI.item
+                    a(href='email:') office@tarpstabdart.ru
+    +e.address
+        +address
+    +e.social
+        +social
+

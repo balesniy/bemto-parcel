@@ -1,0 +1,14 @@
+mixin feedback-form
+    +b.FORM.feedback-form
+        +e.wrapper
+            +e.title Форма обратной связи
+            +e.prompt.
+                Заполните заявку обратной связи и мы с вами свяжемся в самое ближайшее время
+        +e.INPUT(placeholder="Ваше имя").field
+        +e.INPUT(placeholder="Ваш E-mail" type="email").field
+        +e.INPUT(placeholder="Ваш Номер телефона" type="phone").field
+        +e.TEXTAREA(placeholder="Введите ваше сообщение").message
+        +e.send
+            button Отправить
+        +e.consent.
+            Нажимая на кнопку “Отправить” я даю согласие на обработку персональных данных в соответствии с #[a(href="#") Политикой конфиденциальности]

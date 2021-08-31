@@ -1,0 +1,50 @@
+include ../components/button/button
+include ../components/rate/rate
+include ../components/cart/cart
+include ../components/menu/menu
+
++b.page-header
+    +e.menu--hidden
+        +menu(menu)
+    +e.wrapper--shadowed
+        +e.logo
+            img(src='assets/logo.png' width=325)
+        +e.contacts
+            +e.phone 7 812 305 25 16
+            +e.phone 7 812 305 25 16
+            +e.phone 7 812 305 25 16
+            +e.phone 7 812 305 25 16
+        +e.wrapper
+            +e.email
+                | Почта:
+                a(href='email:') office@tarpstabdart.ru
+            +e.rate
+                +rate
+        +e.cart
+            +cart(12)
+    +e.wrapper--shadowed
+        +e.menu-wrapper
+            +e.main-menu
+                +button.btn--dark.btn--menu Меню
+            +e.user-menu
+                +e.user-menu-item
+                    +button(href="#").btn--primary.btn--login Войти
+                +e.user-menu-item
+                    +button(href="#").btn--secondary.btn--signup Регистрация
+            +e.SELECT.lang
+                option ru
+                option en
+        +e.fast-buy
+            +b.fast-buy
+                +e.SELECT.field--type
+                    option Акриловая ткань
+                    option Акриловая ткань
+                    option Акриловая ткань
+                +e.SELECT.field--color
+                    option Beige
+                    option Beige
+                    option Beige
+                +e.INPUT(type='number' value='1').field--min-width
+                +e.INPUT(type='number' placeholder='Ширина').field--max-width
+                +e.submit
+                    +button.btn--primary Купить

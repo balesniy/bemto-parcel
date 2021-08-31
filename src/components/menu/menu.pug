@@ -1,0 +1,18 @@
+include ../social/social
+include ../address/address
+
+mixin menu(items)
+    +b.menu
+        +e.logo
+            img(src='assets/logo.png' width=325)
+        +e.close-button
+            +button Закрыть
+        +e.UL.list
+            each item in items
+                +e.LI.item
+                    a(href='#')= item
+        +e.address
+            +address
+        +e.social
+            +social
+

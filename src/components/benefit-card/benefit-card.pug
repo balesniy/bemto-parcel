@@ -1,0 +1,5 @@
+mixin benefit-card(title, icon)
+    +b(class=`benefit-card--${icon}`)
+        +e.title= title
+        +e.text
+            block

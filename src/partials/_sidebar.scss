@@ -1,0 +1,55 @@
+.sidebar {
+
+  max-width: 396px;
+
+  &__filters-control {
+    margin-bottom: 10px;
+  }
+
+  &__categories {
+    padding: 20px 15px;
+  }
+
+  &__category {
+    padding: 10px 0;
+    margin-bottom: 2px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+
+    box-shadow: inset 0px -1px 0px rgba(11, 13, 15, 0.1);
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      content: "";
+      background-color: #0578E2;
+      mask-image: url("assets/icon-chevron-down.svg");
+      transform: rotate(-90deg);
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__banner {
+    padding: 15px;
+    margin-top: 10px;
+  }
+  .banner {
+    padding: 60px;
+    background: linear-gradient(0deg, rgba(11, 13, 15, 0.1), rgba(11, 13, 15, 0.1));
+    border-radius: 12px;
+
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+
+    color: #0B0D0F;
+  }
+}

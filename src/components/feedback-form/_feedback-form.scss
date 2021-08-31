@@ -1,0 +1,118 @@
+.feedback-form {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+
+  background-color: rgba(5, 120, 226, 0.1);
+  background-image: url("./assets/icon-message.svg");
+  background-size: 84px 84px;
+  background-position: top 40px left 40px;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 14px 24px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+
+    /* чёрный */
+    color: #0B0D0F;
+
+    margin-bottom: 20px;
+  }
+
+  &__prompt {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: rgba(11, 13, 15, 0.5);
+  }
+
+  &__wrapper {
+    grid-column: 1 / 3;
+    grid-row: 1 / -1;
+    align-self: end;
+    padding-top: 94px;
+  }
+
+  &__field {
+    grid-column: 3;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    padding: 18px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+
+    &::placeholder {
+      color: rgba(11, 13, 15, 0.3);
+    }
+  }
+
+  &__message {
+    grid-column: 4;
+    grid-row: 1 / 4;
+
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__consent {
+    grid-column: 3;
+    grid-row: 4;
+    font-size: 12px;
+    line-height: 14px;
+    a {
+      color: #0578E2;
+    }
+  }
+
+  &__send {
+    grid-column: 4;
+    grid-row: 4;
+
+    button {
+      width: 100%;
+      background: #0578E2;
+      border-radius: 10px;
+      border: none;
+      color: #FFFFFF;
+      padding: 12px 24px;
+
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        mask-image: url("assets/icon-message.svg");
+      }
+    }
+  }
+}

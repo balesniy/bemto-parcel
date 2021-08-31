@@ -1,0 +1,65 @@
+@use 'src/variables' as *;
+
+@import "components/button/button";
+@import "components/feedback-form/feedback-form";
+@import "components/benefit-card/benefit-card";
+@import "components/solution-card/solution-card";
+@import "components/applying-card/applying-card";
+@import "components/popular-card/popular-card";
+@import "components/pagination/pagination";
+@import "components/fast-buy/fast-buy";
+@import "components/rate/rate";
+@import "components/cart/cart";
+@import "components/slider/slider";
+@import "components/filters/filters";
+@import "components/checkbox/checkbox";
+@import "components/menu/menu";
+@import "components/social/social";
+@import "components/address/address";
+
+@import "partials/page-header";
+@import "partials/page-content";
+@import "partials/page-footer";
+@import "partials/sidebar";
+
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: $color-secondary;
+  color: $color-primary;
+
+  //opacity: 0.5;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+
+.index-page {
+  display: grid;
+
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "header header" "sidebar content" "footer footer";
+  gap: 30px 24px;
+
+  margin: 0 auto;
+  max-width: 1656px;
+
+  header {
+    grid-area: header;
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+
+  main {
+    grid-area: content;
+  }
+
+  footer {
+    grid-area: footer;
+    margin-top: 70px;
+  }
+}

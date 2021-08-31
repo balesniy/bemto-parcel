@@ -1,0 +1,113 @@
+extends layouts/base
+
+block variables
+    - var title = 'TarpStandard Redesign';
+    - var description = 'Parcel + Pug';
+    - var pageClass = 'index-page';
+    -
+        var applyings = [
+            {name: 'Арктика', image: 'assets/applying-1.jpg'},
+            {name: 'Бассейны, ёмкости', image: 'assets/applying-2.jpg'},
+            {name: 'Батуты, спорт инвентарь', image: 'assets/applying-3.jpg'},
+            {name: 'Лодки, пневмоструктуры', image: 'assets/applying-4.jpg'},
+            {name: 'Мебель', image: 'assets/applying-5.jpg'},
+            {name: 'Сумки и упаковки', image: 'assets/applying-6.jpg'},
+            {name: 'Тенты для катеров и яхт', image: 'assets/applying-7.jpg'},
+            {name: 'Тенты, архитектура', image: 'assets/applying-8.jpg'},
+            {name: 'Экипировка', image: 'assets/applying-9.jpg'},
+        ];
+
+block head
+    include partials/pixel-glass
+
+block header
+    include partials/header
+
+block aside
+    include partials/aside
+
+block content
+    include components/feedback-form/feedback-form
+    include components/benefit-card/benefit-card
+    include components/solution-card/solution-card
+    include components/applying-card/applying-card
+    include components/popular-card/popular-card
+    include components/pagination/pagination
+    include components/slider/slider
+
+    +b.page-content
+        +e.promo
+            +slider
+                img(src='assets/promo-1.jpg')
+                h2 Тентовая ткань в наличии
+                p От 330г/м2 до 900г/м2
+        +e.applyings
+            +e.applyings-title Варианты применения товара
+            +e.UL.applyings-list
+                each applying in applyings
+                    +e.LI.applyings-item
+                        +applying-card(applying.name, applying.image)
+
+        +e.popular
+            +e.popular-title Популярные товары
+            +e.UL.popular-list
+                +e.LI.popular-item
+                    +popular-card(
+                        title='TarpStandart Pneumo HLS 1180/2.1м/Blue (22м.)'
+                        image='assets/portfolio-1.jpg'
+                        price='По запросу'
+                    )
+                +e.LI.popular-item
+                    +popular-card(
+                        title='TarpStandart Pneumo HLS 1180/2.1м/Blue (22м.)'
+                        image='assets/portfolio-2.jpg'
+                        price='По запросу'
+                    )
+                +e.LI.popular-item
+                    +popular-card(
+                        title='TarpStandart Pneumo HLS 1180/2.1м/Blue (22м.)'
+                        image='assets/portfolio-3.jpg'
+                        price='По запросу'
+                    )
+                +e.LI.popular-item
+                    +popular-card(
+                        title='TarpStandart Pneumo HLS 1180/2.1м/Blue (22м.)'
+                        image='assets/portfolio-1.jpg'
+                        price='12 900-00'
+                    )
+
+        +e.solutions
+            +e.solutions-header
+                +e.solutions-title Наши решения
+                +e.solutions-pagination
+                    +pagination(1,23)
+            +e.UL.solutions-list
+                +e.LI.solutions-item
+                    +solution-card('Название 1', 'assets/portfolio-1.jpg')
+                +e.LI.solutions-item
+                    +solution-card('Название 2', 'assets/portfolio-2.jpg')
+                +e.LI.solutions-item
+                    +solution-card('Название 3', 'assets/portfolio-3.jpg')
+
+        +e.benefits
+            +e.benefits-title Наши преимущества
+            +e.UL.benefits-list
+                +e.LI.benefits-item
+                    +benefit-card('Большой ассортимент', 'laptop')
+                        | Более 100 видов технического текстиля в наличии
+                +e.LI.benefits-item
+                    +benefit-card('Гарантия сроков', 'warranty')
+                        | При задержке поставок по независящим от нас причинам гарантируем отгрузку товара со своего склада
+                +e.LI.benefits-item
+                    +benefit-card('Команда профессионалов', 'profile')
+                        | Все наши менеджеры -опытные эксперты по техническому текстилю. Все наши менеджеры являются экспертами которые помогут профессионально подобрать наиболее оптимальный вариант материала.
+        +e.feedback
+            +feedback-form
+
+block footer
+    include partials/footer
+
+
+
+
+

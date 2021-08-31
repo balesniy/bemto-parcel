@@ -1,0 +1,23 @@
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    background-image: url(assets/checkbox.svg);
+  }
+}
+
+
+/* Checked */
+
+.checkbox__input:checked + .checkbox__icon {
+  background-image: url(assets/checkbox-checked.svg);
+}

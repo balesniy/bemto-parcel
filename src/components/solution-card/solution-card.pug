@@ -1,0 +1,4 @@
+mixin solution-card(title, src)
+    +b.solution-card
+        +e.title= title
+        +e.IMG(src= `./${src}?as=webp&width=400`).image

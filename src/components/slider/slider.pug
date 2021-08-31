@@ -1,0 +1,14 @@
+mixin slider
+    +b.slider
+        if block
+            +e.content
+                block
+        else
+            | No content provided
+        +e.cta
+            +button(href='#') Посмотреть
+        +e.controls
+            +e.BUTTON.control--active
+            +e.BUTTON.control
+            +e.BUTTON.control
+            +e.BUTTON.control

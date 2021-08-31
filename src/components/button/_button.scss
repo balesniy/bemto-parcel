@@ -1,0 +1,93 @@
+@use 'src/variables' as *;
+
+.btn {
+  display: inline-flex;
+  width: max-content;
+  padding: 12px 24px;
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-decoration: none;
+
+  /* чёрный */
+  color: #0B0D0F;
+
+  background: #FFFFFF;
+
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+
+
+
+  &--primary {
+    background: $color-brand;
+    color: $color-secondary;
+  }
+
+  &--secondary {
+    background: rgba(5, 120, 226, 0.1);
+    /* синий */
+    color: #0578E2;
+  }
+
+  &--dark {
+    /* чёрный */
+    background: #0B0D0F;
+    color: $color-secondary;
+  }
+
+  &--menu {
+    &::before {
+      content: url("assets/icon-justify.svg");
+    }
+  }
+
+  &--login {
+    &::before {
+      content: url("assets/icon-log-in.svg");
+    }
+  }
+
+  &--signup {
+    &::before {
+      content: url("assets/icon-user.svg");
+    }
+  }
+
+  &--cart {
+    &::before {
+      content: url("assets/icon-cart.svg");
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+    min-width: max-content;
+    justify-content: center;
+  }
+
+  &--chevron {
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    &::after {
+      content: "";
+      width: 1.5em;
+      height: 1.5em;
+      transform: rotate(0.5turn);
+      background-color: #FFFFFF;
+      mask-image: url("assets/icon-chevron-down.svg");
+    }
+  }
+}

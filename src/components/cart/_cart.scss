@@ -1,0 +1,23 @@
+.cart {
+  padding: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  /* чёрный */
+  color: #0B0D0F;
+
+  background: rgba(11, 13, 15, 0.05);
+  border-radius: 10px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &::before {
+    content: url("assets/icon-cart.svg");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+}

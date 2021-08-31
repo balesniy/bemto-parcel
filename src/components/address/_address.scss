@@ -1,0 +1,21 @@
+.address {
+  &__title {
+    width: max-content;
+
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+
+    color: #0578E2;
+
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #0B0D0F;
+  }
+}

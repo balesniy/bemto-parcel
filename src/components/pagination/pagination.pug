@@ -1,0 +1,9 @@
+mixin pagination(current, total)
+    +b.pagination
+        +e.info
+            +e.SPAN.current= current
+            | /
+            +e.SPAN.total= total
+        +e.buttons
+            +e.BUTTON.button--prev
+            +e.BUTTON.button--next

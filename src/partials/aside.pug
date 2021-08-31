@@ -1,0 +1,21 @@
+include ../components/filters/filters
+
+-
+    var categories = [
+        'Акриловая ткань', 'Ардэк', 'Кожазаменитель',
+        'Магнитный профиль для завес', 'Материал для вейдерсов',
+        'Морские тентовые кнопки',
+        'Акриловая ткань', 'Аэрдек', 'Кожазменитель',
+    ]
+
++b.sidebar
+    +e.filters
+        +e.filters-control
+            +button.btn--dark.btn--chevron Расширенный поиск
+        +e.filters-content
+            +filters
+    +e.categories
+        each item in categories
+            +e.category #{item}
+    +e.banner
+        +b.banner Рекламный баннер
